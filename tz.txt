@@ -1,0 +1,115 @@
+Техническое задание 
+
+Регистрация: 
+1. email:
+	Sign up:
+	> username
+	> password
+	> send code
+	
+	Sign in:
+	> username
+	> password
+
+2. telegram bot 
+
+	Sign up:
+	> username 
+	> password
+ 	> send code
+
+	Sign in:
+	> username
+	> send code
+
+
+Profile:
+	Creation:(null = False)
+	> username
+	> age 	
+	
+	Addition: (null = True)
+	> photo
+	> about
+
+	
+
+Game:
+	Administrator:
+	> Creation: игры можно создать
+	> Editing: Игры можно изменить (оценку, 
+	> Read: Смотреть и скачать
+	> Delete: Удалить
+
+	Client:
+	> Editing: Игры можно изменить (оценку, 
+	> Read: Смотреть и скачать
+
+Category:
+
+	Admin:
+	Добавлять, распределять, удалить, менять
+
+	Client:
+	Смотреть
+
+
+Cart:
+	Admin:
+	все	
+
+	Client:
+	Добавлять игры, скины и удалять
+
+
+
+PAGES:
+
+1. Home:
+Header:
+Home - Главная страница
+Wishlist - Избранное
+Profile - Профиль
+Поиск 
+
+	Catalog:
+	> Самые новые
+	> Category
+	> по скидкам
+
+
+
+Footer:
+Contact - Контакты
+Logo - Лого
+Navigation - Навигация
+
+
+2. Профиль
+
+Сүрөт, аты, никнейм, о себе, Избранное
+Банковская карта.
+
+3. Игра
+
+Данные о игре
+Купить
+Оценить
+В избранное
+Скины/донат
+Рекомендации по похожим жанрам и разработчикам
+
+
+4. Вишлист / Корзина
+	
+Добавить товары
+Прочитать / Просмотреть товары
+Удалить товары	
+Очистить корзины
+
+
+
+
+
+
+
