@@ -4,6 +4,9 @@ from datetime import datetime
 
 from django.db.models import ForeignKey
 
+class User(models.Model):
+    pass
+
 
 # Create your models here.
 
@@ -12,6 +15,9 @@ class Category(models.Model):
     description = models.TextField()
     discount = models.IntegerField(default=0)
     photo = models.ImageField(upload_to="media/images", null=False, blank=False)
+
+    def __s__(self):
+        return self.name
 
 class Goods(models.Model):
     name = models.CharField(max_length=200, null=False, blank=False)
@@ -25,10 +31,10 @@ class Goods(models.Model):
     file = models.FileField(upload_to="goods_files/", null=False, blank=False)
 
 
-class Game(models.Model, Goods):
+class Game(Goods):
     pass
 
-class Skin(models.Model, Goods):
+class Skin(Goods):
 
     GRADES = {
         "UC": "Uncommon",
