@@ -1,17 +1,19 @@
-from IPython.core.completer import back_latex_name_matcher
 from django.db import models
 from datetime import datetime
-
 from django.db.models import ForeignKey
 
 
-# Create your models here.
+class User(models.Model):
+    pass
 
 class Category(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
     description = models.TextField()
     discount = models.IntegerField(default=0)
     photo = models.ImageField(upload_to="media/images", null=False, blank=False)
+
+    def __str__(self): 
+        return self.name
 
 class Goods(models.Model):
     name = models.CharField(max_length=200, null=False, blank=False)
@@ -25,10 +27,11 @@ class Goods(models.Model):
     file = models.FileField(upload_to="goods_files/", null=False, blank=False)
 
 
-class Game(models.Model, Goods):
+class Game(Goods):
+
     pass
 
-class Skin(models.Model, Goods):
+class Skin(Goods):
 
     GRADES = {
         "UC": "Uncommon",
