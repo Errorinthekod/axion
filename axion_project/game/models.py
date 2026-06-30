@@ -2,9 +2,9 @@ from django.db import models
 from datetime import datetime
 from django.db.models import ForeignKey
 
+from user.models import User
 
-class User(models.Model):
-    pass
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
@@ -17,7 +17,7 @@ class Category(models.Model):
 
 class Goods(models.Model):
     name = models.CharField(max_length=200, null=False, blank=False)
-    creator = ForeignKey('User', on_delete=models.CASCADE)
+    creator = ForeignKey(User, on_delete=models.CASCADE)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
     discount = models.IntegerField(default=0)
