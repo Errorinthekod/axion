@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import Category
+from .models import Category, Game
 # Register your models here.
 
 # Админ панелге кошуу - Добавление в админ панель
 admin.site.register(Category)
+admin.site.register(Game)
+

@@ -17,12 +17,15 @@ def game_html(request):
     """
     HTML шаблон чыгара турган контроллер (view)
     """
-    data = {}
-    return render(request, "browse.html")
+    data = {
+        "name": "Minecraft",
+        "rating": "5.0",
+    }
+    return render(
+        request,
+        "browse.html",
+        context = data)
 
-#     git checkout main
-#     git pull origin  main
-#     git checkout -b feature/amir
 
 
 
